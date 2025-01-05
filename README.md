@@ -1,186 +1,127 @@
-# مستندات پروژه Noteify
+# Noteify
 
-## توضیحات کلی
+📒 **Noteify**
 
-Noteify یک اپلیکیشن سبک و کارآمد برای مدیریت یادداشت‌ها است که به کاربران اجازه می‌دهد یادداشت‌های خود را سازماندهی کنند. این پروژه شامل قابلیت‌های زیر است:
-
-- **دسته‌بندی یادداشت‌ها:** امکان گروه‌بندی یادداشت‌ها بر اساس موضوع.
-- **جستجوی پیشرفته:** جستجوی یادداشت‌ها با کلمات کلیدی و دسته‌بندی.
-- **سینک با LocalStorage:** ذخیره یادداشت‌ها در مرورگر به عنوان شبیه‌سازی سینک با فضای ابری.
-- **رابط کاربری ساده و زیبا:** طراحی مینیمال برای استفاده راحت‌تر.
-
-پشتیبانی این پروژه توسط **M.Amin Askari** ارائه می‌شود و می‌توانید اطلاعات بیشتر را در وب‌سایت‌های [Microservice.ir](https://microservice.ir) و [Metacortex.ir](https://metacortex.ir) پیدا کنید.
+یک اپلیکیشن سبک و کارآمد برای یادداشت‌برداری روزانه که به شما امکان می‌دهد یادداشت‌های خود را سازماندهی، دسته‌بندی و مدیریت کنید. این اپلیکیشن با طراحی مدرن، قابلیت‌های پیشرفته‌ای مانند ذخیره‌سازی لوکال و یادآور نوتیفیکیشن مرورگر را ارائه می‌دهد.
 
 ---
 
-## قابلیت‌ها
+## 🚀 ویژگی‌ها
 
-### 1. دسته‌بندی یادداشت‌ها
-
-- کاربران می‌توانند یادداشت‌های خود را بر اساس دسته‌بندی‌های شخصی، کاری و سایر گروه‌بندی کنند.
-
-### 2. جستجوی پیشرفته
-
-- امکان جستجو در متن و عنوان یادداشت‌ها وجود دارد.
-- فیلتر کردن یادداشت‌ها بر اساس دسته‌بندی.
-
-### 3. ذخیره در LocalStorage
-
-- یادداشت‌ها به صورت خودکار در LocalStorage مرورگر ذخیره می‌شوند و پس از بستن مرورگر همچنان در دسترس خواهند بود.
-
-### 4. رابط کاربری مدرن
-
-- طراحی واکنش‌گرا (Responsive) برای دسترسی در تمامی دستگاه‌ها.
-- استفاده از مدال (Modal) برای افزودن یادداشت‌های جدید.
+1. **مدیریت یادداشت‌ها**:
+   - امکان افزودن، ویرایش و حذف یادداشت‌ها.
+   - دسته‌بندی یادداشت‌ها بر اساس موضوعات مختلف.
+2. **دسته‌بندی‌ها**:
+   - افزودن، ویرایش و حذف دسته‌بندی‌ها (به‌جز "متفرقه").
+3. **جستجوی پیشرفته**:
+   - جستجوی یادداشت‌ها با کلمات کلیدی.
+4. **یادآور**:
+   - تنظیم یادآور برای هر یادداشت و ارسال نوتیفیکیشن مرورگر.
+5. **ذخیره‌سازی لوکال**:
+   - ذخیره‌سازی تمام یادداشت‌ها و دسته‌بندی‌ها در لوکال استوریج برای استفاده آفلاین.
+6. **طراحی زیبا و مدرن**:
+   - طراحی کاملاً راست‌چین (RTL) با رنگ‌بندی و ساختار کاربرپسند.
 
 ---
 
-## فایل‌ها و ساختار پروژه
+## 📂 ساختار پروژه
 
-```
-Noteify/
+```plaintext
+Noteify
+│
 ├── index.html       # فایل اصلی HTML
-├── styles.css       # فایل CSS برای استایل‌دهی
-├── script.js        # فایل JavaScript برای عملکرد برنامه
+├── styles.css       # استایل‌ها و طراحی پروژه
+├── scripts.js       # کدهای جاوااسکریپت برای تعاملات
+└── README.md        # مستندات پروژه
 ```
 
 ---
 
-## راه‌اندازی پروژه
+## 🛠️ نحوه استفاده
 
-### 1. پیش‌نیازها
+1. پروژه را Clone یا دانلود کنید:
 
-- مرورگری با پشتیبانی از LocalStorage و جاوااسکریپت.
+   ```bash
+   git clone https://github.com/yourusername/noteify.git
+   ```
 
-### 2. نحوه اجرا
+2. فایل `index.html` را در مرورگر خود باز کنید.
 
-1. فایل‌های پروژه را دانلود کنید.
-2. فایل `index.html` را در مرورگر باز کنید.
-
----
-
-## کد نمونه
-
-### افزودن یادداشت جدید (JavaScript)
-
-```javascript
-noteForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const title = document.getElementById('noteTitle').value;
-    const content = document.getElementById('noteContent').value;
-    const category = document.getElementById('noteCategory').value;
-
-    const newNote = { title, content, category };
-    notes.push(newNote);
-    localStorage.setItem('notes', JSON.stringify(notes));
-
-    renderNotes();
-    modal.style.display = 'none';
-    noteForm.reset();
-});
-```
+3. از قابلیت‌های مدیریت یادداشت‌ها و دسته‌بندی‌ها لذت ببرید.
 
 ---
 
-## پشتیبانی
+## 💻 توسعه‌دهنده
 
-برای هرگونه سوال یا پیشنهاد، لطفاً با [M.Amin Askari](mailto\:support@microservice.ir) تماس بگیرید یا به وب‌سایت‌های زیر مراجعه کنید:
-
-- [Microservice.ir](https://microservice.ir)
-- [Metacortex.ir](https://metacortex.ir)
-
----
-
-# Documentation for Noteify
-
-## General Description
-
-Noteify is a lightweight and efficient application for managing notes. It provides users with the ability to organize their notes easily. The key features include:
-
-- **Note Categorization:** Group notes by topics.
-- **Advanced Search:** Search notes by keywords and categories.
-- **Sync with LocalStorage:** Save notes in the browser to simulate cloud sync.
-- **Modern User Interface:** Minimalistic design for a better experience.
-
-This project is supported by **M.Amin Askari**. For more information, visit [Microservice.ir](https://microservice.ir) and [Metacortex.ir](https://metacortex.ir).
+**M.Amin Askari**  
+[Microservice.ir](https://microservice.ir)  
+[Metacortex.ir](https://metacortex.ir)
 
 ---
 
-## Features
+## 🌟 پشتیبانی
 
-### 1. Note Categorization
-
-- Users can group their notes under categories such as personal, work, or others.
-
-### 2. Advanced Search
-
-- Search notes by their content and title.
-- Filter notes based on categories.
-
-### 3. LocalStorage Integration
-
-- Notes are automatically saved in the browser's LocalStorage and remain accessible even after closing the browser.
-
-### 4. Modern User Interface
-
-- Responsive design accessible on all devices.
-- Modal-based UI for adding new notes.
+در صورت بروز هرگونه مشکل یا پیشنهاد، لطفاً با ایمیل توسعه‌دهنده تماس بگیرید یا درخواست خود را در [صفحه گیت‌هاب](https://github.com/yourusername/noteify) ثبت کنید.
 
 ---
 
-## Project Files and Structure
+## 📜 لایسنس
 
-```
-Noteify/
-├── index.html       # Main HTML file
-├── styles.css       # CSS file for styling
-├── script.js        # JavaScript file for functionality
-```
+این پروژه تحت لایسنس MIT منتشر شده است. برای اطلاعات بیشتر، به فایل [LICENSE](LICENSE) مراجعه کنید.
 
 ---
 
-## Running the Project
+## ✨ پیش‌نیازها
 
-### 1. Requirements
-
-- A browser with LocalStorage and JavaScript support.
-
-### 2. Steps
-
-1. Download the project files.
-2. Open the `index.html` file in your browser.
+برای استفاده از ویژگی نوتیفیکیشن مرورگر، دسترسی به نوتیفیکیشن‌ها را فعال کنید.
 
 ---
 
-## Code Example
+## ⚙️ به‌روزرسانی‌ها
 
-### Adding a New Note (JavaScript)
-
-```javascript
-noteForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const title = document.getElementById('noteTitle').value;
-    const content = document.getElementById('noteContent').value;
-    const category = document.getElementById('noteCategory').value;
-
-    const newNote = { title, content, category };
-    notes.push(newNote);
-    localStorage.setItem('notes', JSON.stringify(notes));
-
-    renderNotes();
-    modal.style.display = 'none';
-    noteForm.reset();
-});
-```
+- **نسخه 1.0**:
+  - پیاده‌سازی اولیه با قابلیت‌های مدیریت یادداشت و دسته‌بندی‌ها.
+  - جستجوی پیشرفته و نوتیفیکیشن یادآور.
+  - طراحی مدرن و راست‌چین.
 
 ---
 
-## Support
+## 🌐 لینک‌ها و منابع
 
-For any questions or suggestions, please contact [M.Amin Askari](mailto\:support@microservice.ir) or visit the following websites:
+- [MDN Web Docs - Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [MDN Web Docs - Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API)
 
-- [Microservice.ir](https://microservice.ir)
-- [Metacortex.ir](https://metacortex.ir)
+---
 
+<div dir="rtl">
+
+# Noteify
+
+یک اپلیکیشن سبک و کاربردی برای مدیریت یادداشت‌های روزانه به زبان فارسی.
+
+## ویژگی‌ها
+- افزودن، حذف و مدیریت یادداشت‌ها.
+- دسته‌بندی و جستجوی یادداشت‌ها.
+- یادآور با اعلان مرورگر.
+
+</div>
+
+---
+
+## About Noteify
+
+**Noteify** is a lightweight and efficient daily note-taking application designed to help users organize, categorize, and manage their notes effortlessly. With features like local storage, advanced search, and browser notifications, it ensures a seamless and productive experience.
+
+### Features:
+- Add, edit, and delete notes.
+- Categorize notes into different topics.
+- Advanced search functionality to quickly find notes.
+- Reminder notifications for important notes.
+
+### Author:
+**M.Amin Askari**  
+[Microservice.ir](https://microservice.ir)  
+[Metacortex.ir](https://metacortex.ir)
+
+### Collaboration:
+We are open to collaborations and further development of this project. If you are interested, feel free to reach out via GitHub or the provided websites.
