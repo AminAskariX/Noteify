@@ -1,0 +1,408 @@
+/*!
+ * Project   : Noteify - Daily Note App
+ * Author    : م.امین عسکری (M.Amin Askari)
+ * Website   : aminaskarix.ir | microservice.ir | metacortex.ir
+ * GitHub    : github.com/aminaskarix
+ * License   : MIT License - Open Source ❤️
+ * Year      : 2025
+ */
+/* بارگذاری فونت‌های فارسی از CDN */
+@import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css');
+@import url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Vazir', 'Shabnam', sans-serif;
+}
+
+body {
+  background-color: #f9f9fb;
+  color: #333;
+  direction: rtl;
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* هدر برنامه */
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  color: #3f51b5;
+}
+
+.app-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* فرم یادداشت */
+.note-form {
+  margin-bottom: 30px;
+  background-color: #f1f3f6;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.note-form h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.note-form input,
+.note-form textarea,
+.note-form select,
+.note-form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.note-form button {
+  background-color: #3f51b5;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note-form button:hover {
+  background-color: #303f9f;
+}
+
+/* دسته‌بندی‌ها */
+.category-manager {
+  margin-bottom: 30px;
+}
+
+.category-manager h2 {
+  margin-bottom: 10px;
+  color: #3f51b5;
+}
+
+#category-list {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+#category-list li {
+  padding: 8px;
+  background-color: #e0e0e0;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* جستجو */
+.search-section {
+  margin-bottom: 30px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* لیست یادداشت‌ها */
+.notes-list h2 {
+  margin-bottom: 10px;
+}
+
+#notes-container {
+  list-style: none;
+}
+
+#notes-container li {
+  background-color: #fffde7;
+  border: 1px solid #fbc02d;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+#notes-container li .note-title {
+  font-weight: bold;
+  color: #f57c00;
+  margin-bottom: 6px;
+}
+
+#notes-container li .note-content {
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.note-meta {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.note-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.note-actions button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.note-actions .edit {
+  background-color: #0288d1;
+  color: #fff;
+}
+
+.note-actions .delete {
+  background-color: #d32f2f;
+  color: #fff;
+}
+.app-footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.app-footer a {
+  color: #3f51b5;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+/* دکمه تغییر تم */
+.theme-toggle {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#new-category {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+#new-category:focus {
+  border-color: #3f51b5;
+  outline: none;
+  background-color: #f5f5ff;
+}
+
+#add-category {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-category:hover {
+  background-color: #388e3c;
+}
+/* 🌙 تم تاریک - طراحی بهبود یافته */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* کانتینر اصلی */
+body.dark-mode .app-container {
+  background-color: #1c1c1c;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+/* تیترها */
+body.dark-mode h1,
+body.dark-mode h2 {
+  color: #f1f1f1;
+}
+
+/* ورودی‌ها، سلکت‌ها، تکست‌آریا */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #888;
+}
+
+/* دکمه‌ها */
+body.dark-mode button {
+  background-color: #3f51b5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode button:hover {
+  background-color: #5c6bc0;
+}
+
+/* فرم یادداشت */
+body.dark-mode .note-form {
+  background-color: #232323;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* مدیریت دسته‌بندی‌ها */
+body.dark-mode .category-manager {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+body.dark-mode #new-category {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+body.dark-mode #category-list li {
+  background-color: #333;
+  color: #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark-mode #category-list button {
+  background: none;
+  color: #ff6f61;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* سرچ باکس */
+body.dark-mode .search-section {
+  margin-bottom: 30px;
+}
+
+body.dark-mode #search-input {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #444;
+}
+
+/* یادداشت‌ها */
+body.dark-mode #notes-container li {
+  background-color: #2d2d2d;
+  border: 1px solid #555;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+body.dark-mode .note-title {
+  color: #ffca28;
+  font-weight: bold;
+}
+
+body.dark-mode .note-content {
+  color: #e0e0e0!important;
+}
+
+body.dark-mode .note-meta {
+  color: #aaaaaa;
+  font-size: 0.85rem;
+}
+
+/* دکمه‌های داخل هر یادداشت */
+body.dark-mode .note-actions button.edit {
+  background-color: #0288d1;
+}
+
+body.dark-mode .note-actions button.delete {
+  background-color: #c62828;
+}
+
+/* دکمه تغییر تم */
+body.dark-mode .theme-toggle {
+  color: #eeeeee;
+}
+
+/* فوتر */
+body.dark-mode .app-footer {
+  color: #888;
+  border-top: 1px solid #333;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 20px;
+}
+
+body.dark-mode .app-footer a {
+  color: #8ab4f8;
+}
+body.dark-mode #new-category {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark-mode #new-category:focus {
+  background-color: #333;
+  border-color: #7986cb;
+}
+
+body.dark-mode #add-category {
+  background-color: #43a047;
+  color: #ffffff;
+}
+
+body.dark-mode #add-category:hover {
+  background-color: #2e7d32;
+}

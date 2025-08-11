@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noteify - اپلیکیشن یادداشت‌برداری</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- هدر برنامه -->
+    <header class="app-header">
+      <h1>📒 Noteify</h1>
+      <p>اپلیکیشن سبک و سریع برای مدیریت یادداشت‌های روزانه</p>
+      <!-- دکمه تغییر تم -->
+<button id="theme-toggle" class="theme-toggle">🌓 تغییر تم</button>
+
+    </header>
+
+    <!-- فرم افزودن یادداشت -->
+    <section class="note-form">
+      <h2>افزودن یادداشت جدید</h2>
+      <input type="text" id="note-title" placeholder="عنوان یادداشت" />
+      <textarea id="note-content" placeholder="متن یادداشت..."></textarea>
+      
+      <select id="note-category">
+        <!-- دسته‌بندی‌ها به‌صورت داینامیک اضافه می‌شن -->
+      </select>
+
+      <input type="datetime-local" id="note-reminder" />
+      <button id="add-note">➕ افزودن یادداشت</button>
+    </section>
+
+    <!-- نمایش دسته‌بندی‌ها -->
+    <section class="category-manager">
+      <h2>دسته‌بندی‌ها</h2>
+      <ul id="category-list">
+        <!-- دسته‌بندی‌ها اینجا نمایش داده می‌شن -->
+      </ul>
+      <input type="text" id="new-category" placeholder="نام دسته‌بندی جدید" />
+      <button id="add-category">➕ افزودن دسته‌بندی</button>
+    </section>
+
+    <!-- نوار جستجو -->
+    <section class="search-section">
+      <input type="text" id="search-input" placeholder="جستجو در یادداشت‌ها..." />
+    </section>
+
+    <!-- لیست یادداشت‌ها -->
+    <section class="notes-list">
+      <h2>یادداشت‌ها</h2>
+      <ul id="notes-container">
+        <!-- یادداشت‌ها اینجا نمایش داده می‌شن -->
+      </ul>
+    </section>
+  </div>
+  <footer class="app-footer">
+    <p>توسعه داده شده با ❤️ توسط <strong>م.امین عسکری</strong></p>
+    <p>
+      <a href="https://aminaskarix.ir" target="_blank">aminaskarix.ir</a> | 
+      <a href="https://microservice.ir" target="_blank">microservice.ir</a> | 
+      <a href="https://metacortex.ir" target="_blank">metacortex.ir</a> | 
+      <a href="https://github.com/aminaskarix" target="_blank">GitHub</a>
+    </p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
