@@ -1,10 +1,7 @@
 /*!
- * Project   : Noteify - Daily Note App
- * Author    : م.امین عسکری (M.Amin Askari)
- * Website   : aminaskarix.ir | microservice.ir | metacortex.ir
- * GitHub    : github.com/aminaskarix
- * License   : MIT License - Open Source ❤️
- * Year      : 2025
+ * Noteify
+ * Copyright (c) 2025 M. Amin Askari
+ * Licensed under the MIT License. See LICENSE.
  */
 // انتخاب المنت‌ها از DOM
 const noteTitle = document.getElementById('note-title');
