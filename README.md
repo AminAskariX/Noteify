@@ -1,127 +1,57 @@
 # Noteify
 
-📒 **Noteify**
+[فارسی](#فارسی) · [English](#english)
 
-یک اپلیکیشن سبک و کارآمد برای یادداشت‌برداری روزانه که به شما امکان می‌دهد یادداشت‌های خود را سازماندهی، دسته‌بندی و مدیریت کنید. این اپلیکیشن با طراحی مدرن، قابلیت‌های پیشرفته‌ای مانند ذخیره‌سازی لوکال و یادآور نوتیفیکیشن مرورگر را ارائه می‌دهد.
+<a id="فارسی"></a>
+## فارسی
 
----
+برنامهٔ سبک یادداشت‌برداری فارسی که داده‌هایش را در مرورگر نگه می‌دارد.
 
-## 🚀 ویژگی‌ها
+### امکانات
 
-1. **مدیریت یادداشت‌ها**:
-   - امکان افزودن، ویرایش و حذف یادداشت‌ها.
-   - دسته‌بندی یادداشت‌ها بر اساس موضوعات مختلف.
-2. **دسته‌بندی‌ها**:
-   - افزودن، ویرایش و حذف دسته‌بندی‌ها (به‌جز "متفرقه").
-3. **جستجوی پیشرفته**:
-   - جستجوی یادداشت‌ها با کلمات کلیدی.
-4. **یادآور**:
-   - تنظیم یادآور برای هر یادداشت و ارسال نوتیفیکیشن مرورگر.
-5. **ذخیره‌سازی لوکال**:
-   - ذخیره‌سازی تمام یادداشت‌ها و دسته‌بندی‌ها در لوکال استوریج برای استفاده آفلاین.
-6. **طراحی زیبا و مدرن**:
-   - طراحی کاملاً راست‌چین (RTL) با رنگ‌بندی و ساختار کاربرپسند.
+- ایجاد، ویرایش و حذف یادداشت؛ دسته‌بندی و جست‌وجوی عنوان یا متن.
+- افزودن و حذف دسته‌بندی‌های دلخواه و انتقال یادداشت‌های دستهٔ حذف‌شده به «متفرقه».
+- تغییر پوسته و اعلان یادآور با مجوز مرورگر.
 
----
+### اجرا
 
-## 📂 ساختار پروژه
+مخزن را با `git clone https://github.com/AminAskariX/Noteify.git` دریافت کنید و `index.html` را در مرورگر باز کنید. برای اعلان‌ها، مجوز مرورگر و محیط سازگار لازم است.
 
-```plaintext
-Noteify
-│
-├── index.html       # فایل اصلی HTML
-├── styles.css       # استایل‌ها و طراحی پروژه
-├── scripts.js       # کدهای جاوااسکریپت برای تعاملات
-└── README.md        # مستندات پروژه
-```
+### محدودیت فعلی
 
----
+داده‌ها در `localStorage` همین مرورگر ذخیره می‌شوند و همگام‌سازی ندارند. تایمر یادآور فقط هنگام افزودن یادداشت در صفحهٔ باز ثبت می‌شود؛ پس از بستن یا بارگذاری دوبارهٔ صفحه دوباره زمان‌بندی نمی‌شود. ویرایش، یادداشت قبلی را از فهرست حذف و اطلاعاتش را به فرم منتقل می‌کند؛ برای ثبت نسخهٔ تازه باید دوباره آن را ذخیره کنید.
 
-## 🛠️ نحوه استفاده
+### پدیدآورنده و حقوق نشر
 
-1. پروژه را Clone یا دانلود کنید:
+© 2025 م.امین عسکری (M. Amin Askari). [GitHub](https://github.com/AminAskariX) · [وب‌سایت](https://aminaskarix.ir)
 
-   ```bash
-   git clone https://github.com/yourusername/noteify.git
-   ```
+### مجوز
 
-2. فایل `index.html` را در مرورگر خود باز کنید.
+این پروژه تحت مجوز MIT منتشر شده است؛ متن کامل در [LICENSE](LICENSE) آمده است. عبارت «تمام حقوق محفوظ است» جایگزین شرایط این مجوز نمی‌شود.
 
-3. از قابلیت‌های مدیریت یادداشت‌ها و دسته‌بندی‌ها لذت ببرید.
+<a id="english"></a>
+## English
 
----
+A lightweight Persian note app that stores data in the browser.
 
-## 💻 توسعه‌دهنده
+### Features
 
-**M.Amin Askari**  
-[Microservice.ir](https://microservice.ir)  
-[Metacortex.ir](https://metacortex.ir)
+- Create, edit, delete, categorize, and search notes.
+- Add or remove categories; notes in a removed category move to the default category.
+- Theme toggle and permission-based browser reminders.
 
----
+### Run
 
-## 🌟 پشتیبانی
+Clone `https://github.com/AminAskariX/Noteify.git` and open `index.html` in a browser. Notifications require browser permission and a compatible context.
 
-در صورت بروز هرگونه مشکل یا پیشنهاد، لطفاً با ایمیل من تماس بگیرید یا درخواست خود را در [صفحه گیت‌هاب](https://github.com/AminAskariX/) ثبت کنید.
+### Current limitations
 
----
+Notes live in this browser's `localStorage` and do not sync. Reminder timers are created when notes are added while the page is open; they are not restored after a reload or browser close. Editing removes the previous note and moves its values into the form, so save the form to create the revised note.
 
-## 📜 لایسنس
+### Author and copyright
 
-این پروژه تحت لایسنس MIT منتشر شده است. برای اطلاعات بیشتر، به فایل [LICENSE](LICENSE) مراجعه کنید.
+Copyright © 2025 M. Amin Askari (م.امین عسکری). [GitHub](https://github.com/AminAskariX) · [Website](https://aminaskarix.ir)
 
----
+### License
 
-## ✨ پیش‌نیازها
-
-برای استفاده از ویژگی نوتیفیکیشن مرورگر، دسترسی به نوتیفیکیشن‌ها را فعال کنید.
-
----
-
-## ⚙️ به‌روزرسانی‌ها
-
-- **نسخه 1.0**:
-  - پیاده‌سازی اولیه با قابلیت‌های مدیریت یادداشت و دسته‌بندی‌ها.
-  - جستجوی پیشرفته و نوتیفیکیشن یادآور.
-  - طراحی مدرن و راست‌چین.
-
----
-
-## 🌐 لینک‌ها و منابع
-
-- [MDN Web Docs - Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-- [MDN Web Docs - Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API)
-
----
-
-<div dir="rtl">
-
-# Noteify
-
-یک اپلیکیشن سبک و کاربردی برای مدیریت یادداشت‌های روزانه به زبان فارسی.
-
-## ویژگی‌ها
-- افزودن، حذف و مدیریت یادداشت‌ها.
-- دسته‌بندی و جستجوی یادداشت‌ها.
-- یادآور با اعلان مرورگر.
-
-</div>
-
----
-
-## About Noteify
-
-**Noteify** is a lightweight and efficient daily note-taking application designed to help users organize, categorize, and manage their notes effortlessly. With features like local storage, advanced search, and browser notifications, it ensures a seamless and productive experience.
-
-### Features:
-- Add, edit, and delete notes.
-- Categorize notes into different topics.
-- Advanced search functionality to quickly find notes.
-- Reminder notifications for important notes.
-
-### Author:
-**M.Amin Askari**  
-[Microservice.ir](https://microservice.ir)  
-[Metacortex.ir](https://metacortex.ir)
-
-### Collaboration:
-We are open to collaborations and further development of this project. If you are interested, feel free to reach out via GitHub or the provided websites.
+This project is licensed under MIT. See [LICENSE](LICENSE) for the full terms.
