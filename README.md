@@ -19,7 +19,7 @@
 
 ### ⚠️ محدودیت فعلی
 
-داده‌ها در `localStorage` همین مرورگر ذخیره می‌شوند و همگام‌سازی ندارند. تایمر یادآور فقط هنگام افزودن یادداشت در صفحهٔ باز ثبت می‌شود؛ پس از بستن یا بارگذاری دوبارهٔ صفحه دوباره زمان‌بندی نمی‌شود. ویرایش، یادداشت قبلی را از فهرست حذف و اطلاعاتش را به فرم منتقل می‌کند؛ برای ثبت نسخهٔ تازه باید دوباره آن را ذخیره کنید.
+داده‌ها در `localStorage` همین مرورگر ذخیره می‌شوند و همگام‌سازی ندارند. یادآورها پس از بازشدن دوبارهٔ صفحه بازسازی می‌شوند و موارد عقب‌افتاده در برنامه نمایش می‌یابند. اعلان مرورگر به مجوز و باز بودن برنامه وابسته است؛ بدون سرویس پوش یا برنامهٔ پس‌زمینه، هنگام بسته‌بودن کامل مرورگر اعلان فوری ممکن نیست. ویرایش اکنون یادداشت قبلی را تا زمان ذخیرهٔ موفق حفظ می‌کند. از دکمه‌های JSON برای پشتیبان‌گیری و انتقال دستی بین دستگاه‌ها استفاده کنید.
 
 ### 💡 یک جریان ساده برای یادداشت‌ها
 
@@ -33,7 +33,7 @@
 | پوستهٔ روشن/تیره | `localStorage` |
 | اعلان یادآور | تایمر JavaScript و مجوز Notifications مرورگر |
 
-> 🔎 از یادداشت‌های مهم نسخهٔ جداگانه نگه دارید؛ این پروژه حساب کاربری، پشتیبان‌گیری خودکار و همگام‌سازی بین دستگاه‌ها ندارد.
+> 🔎 از یادداشت‌های مهم نسخهٔ جداگانه نگه دارید؛ این پروژه حساب کاربری یا همگام‌سازی خودکار ندارد؛ خروجی JSON برای پشتیبان‌گیری دستی فراهم است.
 
 ### 👤 پدیدآورنده و حقوق نشر
 
@@ -60,7 +60,7 @@ Clone `https://github.com/AminAskariX/Noteify.git` and open `index.html` in a br
 
 ### ⚠️ Current limitations
 
-Notes live in this browser's `localStorage` and do not sync. Reminder timers are created when notes are added while the page is open; they are not restored after a reload or browser close. Editing removes the previous note and moves its values into the form, so save the form to create the revised note.
+Notes live in this browser's `localStorage` and do not sync. Reminder times are restored on reopening the page, and overdue items are shown in the app. Browser notifications require permission and an open app; immediate alerts while the browser is fully closed require a push service. Editing preserves the original until saved. JSON export/import provides manual backup and transfer between devices.
 
 ### 💡 A small daily-note workflow
 
@@ -74,7 +74,7 @@ Write a title and body, assign a category, and later find the note by searching 
 | Light/dark preference | `localStorage` |
 | Reminder notification | JavaScript timer plus browser Notifications permission |
 
-> 🔎 Keep separate copies of important notes. This version has no account, automatic backup, or cross-device synchronization.
+> 🔎 Keep separate copies of important notes. This version has no account or automatic sync; JSON export supports manual backup.
 
 ### 👤 Author and copyright
 
